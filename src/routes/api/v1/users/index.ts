@@ -1,12 +1,13 @@
 import express, { Router } from 'express';
-import User from '../../../../models/User';
+import UsersController from '../../../../controllers/api/v1/users';
 
 var router: Router = express.Router();
 
+const controller = new UsersController();
+
 /* GET home page. */
-router.get('/', async (req, res, next) => {
-  let users = await User.find({});
-  res.status(200).json( {users} )
-});
+router.get('/', controller.index);
+
+router.post('/', controller.post);
 
 export default router;
