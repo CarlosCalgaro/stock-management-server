@@ -4,7 +4,6 @@ import logger from 'morgan';
 import createError from 'http-errors';
 import dotenv from 'dotenv';
 import router from './routes'
-import 'module-alias/register';
 import './db/connection';
 
 dotenv.config();
