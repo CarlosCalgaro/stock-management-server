@@ -1,6 +1,4 @@
-import IModel from "./IModel";
-
-export default interface IUser extends IModel {
+export default interface IUser {
   name: string;
   email: string;
   password: string;
